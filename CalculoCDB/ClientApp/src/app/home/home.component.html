@@ -1,0 +1,29 @@
+<h1>Calculadora CDB</h1>
+
+
+<form>
+
+  <div class="form-group">
+    <label>Valor:</label>
+    <input type="number" class="form-control" id="InputValor" [(ngModel)]="calculo.valorInicial" name="valor">
+  </div>
+  <div class="form-group">
+    <label>Prazo:</label>
+    <input type="number" class="form-control" id="InputPrazo" [(ngModel)]="calculo.prazo" name="prazo" placeholder="Em Meses">
+  </div>
+
+
+  <button type="submit" class="btn btn-primary" (click)="calcular()"> Calcular</button>
+
+  <div *ngIf="resultado.bruto != null">
+    <div class="form-group">
+      <h5>Resultado Bruto:</h5>
+      <input type="number" class="form-control" id="InputBruto" [(ngModel)]="resultado.bruto" name="bruto">
+    </div>
+    <div class="form-group">
+      <h5>Resultado Liquido:</h5>
+      <input type="number" class="form-control" id="InputLiquido" [(ngModel)]="resultado.liquido" name="liquido">
+    </div>
+  </div>
+</form>
+
